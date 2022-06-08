@@ -1,6 +1,7 @@
 //import './App.css';
 //import './App.scss';
 import styles from "./App.module.css";
+import Button from "./components/Button";
 
 console.log(styles);
 // {
@@ -16,6 +17,7 @@ function App() {
     <div className={styles["App"]}>
       <header className={styles["header"]}>
         <p className={styles["logo"]}>React Component Styling</p>
+        <Button>Button</Button>
       </header>
     </div>
   );
