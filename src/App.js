@@ -2,6 +2,7 @@
 //import './App.scss';
 import styles from "./App.module.css";
 import Button from "./components/Button";
+import StyledButton from "./components/StyledButton";
 
 console.log(styles);
 // {
@@ -18,6 +19,7 @@ function App() {
       <header className={styles["header"]}>
         <p className={styles["logo"]}>React Component Styling</p>
         <Button>Button</Button>
+        <StyledButton>StyledButton</StyledButton>
       </header>
     </div>
   );
