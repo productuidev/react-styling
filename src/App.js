@@ -4,6 +4,9 @@ import styled, { css } from 'styled-components'
 import styles from "./App.module.css";
 import Button from "./components/Button";
 import StyledButton from "./components/StyledButton";
+import "antd/dist/antd.css";
+import { Calendar } from 'antd';
+import { DatePicker, Space } from 'antd';
 
 console.log(styles);
 // {
@@ -33,6 +36,14 @@ const StyledMyButton = styled(MyButton)`
   display:block;
 `;
 
+const onPanelChange = (value, mode) => {
+  console.log(value.format('YYYY-MM-DD'), mode);
+};
+
+const onChange = (date, dateString) => {
+  console.log(date, dateString);
+};
+
 function App() {
   return (
     <div className={styles["App"]}>
@@ -46,6 +57,12 @@ function App() {
         <StyledButton as={UppercaseButton}>Button</StyledButton>
         <StyledMyButton>Button</StyledMyButton>
       </header>
+      <article>
+      <Space direction="vertical">
+        <DatePicker onChange={onChange} />
+      </Space>
+      <Calendar onPanelChange={onPanelChange} />
+      </article>
     </div>
   );
 }
