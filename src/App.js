@@ -7,6 +7,7 @@ import StyledButton from "./components/StyledButton";
 import "antd/dist/antd.css";
 import { Calendar } from 'antd';
 import { DatePicker, Space } from 'antd';
+import { GithubOutlined } from "@ant-design/icons";
 
 console.log(styles);
 // {
@@ -58,10 +59,13 @@ function App() {
         <StyledMyButton>Button</StyledMyButton>
       </header>
       <article>
-      <Space direction="vertical">
-        <DatePicker onChange={onChange} />
-      </Space>
-      <Calendar onPanelChange={onPanelChange} />
+        <div>
+          <GithubOutlined/>
+        </div>
+        <Space direction="vertical">
+          <DatePicker onChange={onChange} />
+        </Space>
+        <Calendar onPanpnelChange={onPanelChange} />
       </article>
     </div>
   );
